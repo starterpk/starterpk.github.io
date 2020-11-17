@@ -500,14 +500,14 @@ img::-moz-selection {
   background-image: none;
   border-radius: 7px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
   cursor: pointer;
   display: inline-block;
   font-family: "Space Mono", Monaco, Menlo, Consolas, monospace;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.6rem;
-  margin-bottom: 0;
+  margin-bottom: 0.8rem;
   padding: 0.95rem 2rem 0.85rem;
   text-align: center;
   text-decoration: none;
@@ -537,10 +537,10 @@ fieldset[disabled] .btn {
   opacity: 1;
   pointer-events: none;
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 768px) {
   .btn {
     display: block;
-    margin-bottom: 0.8rem;
+    width: 100%;
   }
 }
 a.btn.disabled,
@@ -568,8 +568,8 @@ fieldset[disabled] a.btn {
 .btn--outline,
 .btn--outline:visited {
   background-color: transparent;
-  border-color: #aaaca9;
-  border-width: 1px;
+  border-color: #777777;
+  border-width: 3px;
   color: #4e504d;
 }
 .btn--outline:hover,
@@ -607,7 +607,7 @@ svg {
 
 .form-control {
   background-image: none;
-  border: 1px solid #aaaca9;
+  border: 3px solid #aaaca9;
   border-radius: 7px;
   color: #4e504d;
   display: block;
@@ -655,7 +655,7 @@ svg {
 }
 .select select {
   background-color: #fff;
-  border: 1px solid #aaaca9;
+  border: 3px solid #aaaca9;
   border-radius: 7px;
   color: #4e504d;
   cursor: pointer;
@@ -706,16 +706,11 @@ svg {
   flex-wrap: wrap;
   margin: 0 -1.2rem;
 }
-@media screen and (max-width: 40em) {
-  .grid-row {
-    margin: 0 auto;
-  }
-}
 .grid-column {
   flex: 1 0 0%;
   padding: 0 1.2rem;
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 768px) {
   .grid-column {
     flex-grow: 1;
     flex-basis: 100%;
@@ -724,6 +719,14 @@ svg {
     margin-left: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .grid-row {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+
 .grid-row--flex-cells > .grid-column {
   display: flex;
 }
@@ -795,6 +798,29 @@ svg {
   flex-basis: 80%;
   max-width: 80%;
 }
+
+@media screen and (max-width: 768px) {
+  .span-6,
+  .span-half,
+  .span-4,
+  .span-one-third,
+  .span-8,
+  .span-two-thirds,
+  .span-3,
+  .span-one-fourth,
+  .span-two-fourths,
+  .span-9,
+  .span-three-fourths,
+  .span-one-fifth,
+  .span-two-fifths,
+  .span-three-fifths,
+  .span-four-fifths {
+    flex-basis: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
 .span-1 {
   flex-basis: 8.3333333333%;
   max-width: 8.3333333333%;
@@ -1374,7 +1400,7 @@ hr {
 .show-on-mobile {
   display: none !important;
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 768px) {
   .show-on-mobile,
   .block-on-mobile {
     display: block !important;
@@ -1415,5 +1441,5 @@ hr {
 
 .copied {
   background: #91f991 !important;
-  border: 1px solid #91f991 !important;
+  border: 3px solid #91f991 !important;
 }
