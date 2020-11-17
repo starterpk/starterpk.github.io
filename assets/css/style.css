@@ -598,8 +598,13 @@ svg {
   max-width: 100%;
 }
 .icon {
+  height: 50px;
+}
+
+.icon-sm {
   height: 30px;
 }
+
 .form-control {
   background-image: none;
   border: 1px solid #aaaca9;
@@ -1406,4 +1411,9 @@ hr {
 }
 .clearfix:after {
   clear: both;
+}
+
+.copied {
+  background: #91f991 !important;
+  border: 1px solid #91f991 !important;
 }
